@@ -54,8 +54,6 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
-/* Global styles */
-
 #store #notice {
         color: #000;
         border: 2px solid red;
@@ -124,12 +122,12 @@ div.field, div.actions {
 /* Styles for main page */
 
 #banner {
-  background: #33B3CC;
+  background: #9c9;
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid;
-  font: small-caps 40px/40px "Verdana", serif;
-  color: #3366CC;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282;
   text-align: center;
 }
 
@@ -154,7 +152,7 @@ div.field, div.actions {
   padding-left: 1em;
   padding-bottom: 1em;
   width: 16em;
-  background: #33CC99;
+  background: #141;
 }
 
 #side a {
@@ -205,7 +203,13 @@ div.field, div.actions {
 }
 
 #store .entry  .price {
-  color: #FF6633;
+  color: #44a;
   font-weight: bold;
   margin-right: 2em;
 }
+
+/* START:inline */
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+/* END:inline */
