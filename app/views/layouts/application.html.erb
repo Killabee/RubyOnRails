@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Killabee's Online Shop'</title>
+  <title>Killabee's Books Online Store</title>
 <!-- START:stylesheet -->
   <%= stylesheet_link_tag "scaffold" %>
   <%= stylesheet_link_tag "depot", :media => "all" %><!-- <label id="code.slt"/> -->
@@ -11,15 +11,20 @@
 </head>
 <body id="store">
   <div id="banner">
-    <%= image_tag("istockphoto_6160637-bee-sting.jpg", { :size => "50x50" }) %>
-    <%= @page_title || "Killabee's Shop" %><!-- <label id="code.depot.e.title"/> -->
+    <%= image_tag("logo.jpg", { :size => "40x50"}) %>
+    <%= @page_title || "Killabee's Store" %><!-- <label id="code.depot.e.title"/> -->
   </div>
   <div id="columns">
-    <div id="side">
-      <a href="http://www....">Home</a><br />
-      <a href="http://www..../faq">Questions</a><br />
-      <a href="http://www..../news">News</a><br />
-      <a href="http://www..../contact">Contact</a><br />
+    <div id	="side">
+	<% if @cart %>
+	  <%= hidden_div_if(@cart.line_items.empty?, :id => "cart") do %>
+	  <%= render @cart %>
+	  <% end %>	
+	<% end %>
+      <a href="http://www.google.ch">Home</a><br />
+      <a href="http://www.google.ch">Questions</a><br />
+      <a href="http://www.google.ch">News</a><br />
+      <a href="http://www.google.ch">Contact</a><br />
     </div>
     <div id="main">
       <%= yield %><!-- <label id="code.depot.e.include"/> -->
